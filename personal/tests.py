@@ -1,5 +1,5 @@
 from django.test import TestCase
-from .models import Location, Category
+from .models import Location, Category, Image
 # Create your tests here.
 class LocationTestClass(TestCase):
     def setUp(self):
@@ -57,3 +57,59 @@ class CategoryTestClass(TestCase):
         self.category.delete_category()
         category = Category.objects.all()
         self.assertTrue(len(category)==0)
+
+class ImageTestClass(TestCase):
+    def setUp(self):
+        self.location = Location(location_name='Nairobi')
+        self.location.save()
+
+        self.category = Category(category_name='Cars')
+        self.category.save()
+
+        self.image_ferrari = Image(image_name='image_ferrari',image_description='this is a test instance',location=self.location,category=self.category)
+        self.image_ferrari.save_image()
+
+        self.image_gucci = Image(image_name='image_gucci',image_description='this is a test instance',location=self.location,category=self.category)
+        self.image_gucci.save_image()
+
+    def test_instance(self):
+        self.assertTrue(isinstance(self.image_ferrari,Image))
+
+    def tearDown(self):
+        Image.objects.all().delete()
+        Location.objects.all().delete()
+        Category.objects.all().delete()
+
+    def test_save_image(self):
+        self.image_ferrari.save_image()
+        images = Image.objects.all()
+        self.assertTrue(len(images)>0)
+
+    def test_update_image(self):
+        self.image_ferrari.save_image()
+        self.image_ferrari.update_image(self.image_ferrari.id,'media/test_image.jpg')
+        updated_image = Image.objects.filter(image='media/test_image.jpg')
+        self.assertTrue(len(updated_image)>0)
+
+    def test_delete_image(self):
+        self.image_ferrari.save_image()
+        self.image_ferrari.delete_image()
+        self.image_gucci.delete_image()
+        images = Image.objects.all()
+        self.assertTrue(len(images)==0)
+
+  
+
+    def test_get_image_by_id(self):
+        got_image = self.image_ferrari.get_image_by_id(self.image_ferrari.id)
+        image = Image.objects.filter(id=self.image_ferrari.id)
+        self.assertTrue(got_image,image)
+
+    def test_filter_by_location(self):
+        location = 'Nairobi'
+        got_image = self.image_ferrari.filter_by_location(location)
+        self.assertTrue(len(got_image)>1)
+    def test_search_by_category(self):
+        category = 'Cars'
+        got_image = self.image_ferrari.search_by_category(category)
+        self.assertTrue(len(got_image)>1)
