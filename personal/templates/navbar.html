@@ -1,0 +1,47 @@
+ <!--================Header Menu Area =================-->
+        <header class="header_area">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container box_1620">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav menu_nav ml-auto">
+                          
+                            <li class="nav-item active"><a class="nav-link" href="{% url 'welcome'%}">Home</a></li> 
+                           
+                            <li class="nav-item submenu dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Locations</a>
+                                <ul class="dropdown-menu">
+                                    {% for location in locations %}
+
+      <a class="dropdown-item" href="{% url 'location' location_name=location.location_name %}"><p>{{location.location_name}}</p></a>
+        {% endfor %}
+                                </ul>
+                            </li> 
+                            
+                            
+                        </ul>
+                        <hr>
+                        <ul class="nav navbar-nav navbar-right">
+                              <div class="navbar-brand search-section">
+                                <div class="row">
+                                    <div class="col-md-12 search-form">
+                                        <form class="form-inline" role="search" action="{% url 'search_image' %}">
+                                            <input class="form-control search-input" name="image" type="search" placeholder="Search Photo Category" aria-label="Search">
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                    </div> 
+                </div>
+            </nav>
+        </header>
+
+
+       
