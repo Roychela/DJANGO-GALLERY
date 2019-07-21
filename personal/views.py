@@ -3,7 +3,8 @@ from .models import Image, Category, Location
 # Create your views here.
 def welcome(request):
     images = Image.get_all_images()
-    return render(request, 'welcome.html', {"images": images})
+    locations = Location.objects.all()
+    return render(request, 'welcome.html', {"images": images, "locations": locations})
 
 def search_image(request):
     categories = Category.objects.all()
@@ -22,5 +23,6 @@ def search_image(request):
 
 def get_image_by_location(request,location_name):
     location_images = Image.filter_by_location(location_name)
+    locations = Location.objects.all()
     location = location_name
-    return render(request, 'location.html', {"location_images": location_images, "location": location})
+    return render(request, 'location.html', {"location_images": location_images, "location": location, "locations":locations})
