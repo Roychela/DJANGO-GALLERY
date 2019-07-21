@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="../../static/bitmap/img/favicon.png" type="image/png">
+        <title>Personal Photo Gallery</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="../../static/bitmap/css/bootstrap.css">
+        <link rel="stylesheet" href="../../static/bitmap/vendors/linericon/style.css">
+        <link rel="stylesheet" href="../../static/bitmap/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../../static/bitmap/vendors/owl-carousel/owl.carousel.min.css">
+        <link rel="stylesheet" href="../../static/bitmap/vendors/lightbox/simpleLightbox.css">
+        <link rel="stylesheet" href="../../static/bitmap/vendors/nice-select/css/nice-select.css">
+        <link rel="stylesheet" href="../../static/bitmap/vendors/animate-css/animate.css">
+        <!-- main css -->
+        <link rel="stylesheet" href="../../static/bitmap/css/style.css">
+        <link rel="stylesheet" href="../../static/bitmap/css/responsive.css">
+    </head>
+    <body>
+        {% include 'navbar.html' %}
+      <!--================Home Banner Area =================-->
+        <section class="home_banner_area">
+            <div class="banner_inner d-flex align-items-center">
+            	<div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
+				<div class="container">
+					<div class="banner_content text-center">
+						<h2>My Gallery</h2>
+						<p> Scroll down to view {{location}} Photos </p>
+						<a href="#" class="btn theme_btn">Explore Gallery</a>
+					</div>
+				</div>
+            </div>
+        </section>
+        <!--================End Home Banner Area =================-->
+        
+        {% block content %}{% endblock %}
+       
+        
+        <!--================Footer Area =================-->
+        <footer class="footer_area p_120">
+        	<div class="container">
+        		<div class="row footer_inner">
+        			<div class="col-lg-5 col-sm-6">
+        				<aside class="f_widget ab_widget">
+        					<div class="f_title">
+        						<h3>About Me</h3>
+        					</div>
+        					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore </p>
+        					<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+        				</aside>
+        			</div>
+        			
+        			<div class="col-lg-7">
+        				<aside class="f_widget social_widget">
+        					<div class="f_title">
+        						<h3>Follow Me</h3>
+        					</div>
+        					<p>Let us be social</p>
+        					<ul class="list">
+        						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+        						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        						<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+        						<li><a href="#"><i class="fa fa-behance"></i></a></li>
+        					</ul>
+        				</aside>
+        			</div>
+        		</div>
+        	</div>
+        </footer>
+        <!--================End Footer Area =================-->
+  
+        
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+                         <script>
+   function copy(ids) {
+       var textCopied = document.getElementById(ids);
+       text = textCopied.src;
+       var elementary = document.createElement("input");
+       document.body.appendChild(elementary);
+       elementary.setAttribute('value', text);
+       elementary.select();
+       document.execCommand("copy");
+       alert("Copied: " + textCopied.src);
+       }
+</script>
+        <script src="../../static/bitmap/js/jquery-3.2.1.min.js"></script>
+        <script src="../../static/bitmap/js/popper.js"></script>
+        <script src="../../static/bitmap/js/bootstrap.min.js"></script>
+        <script src="../../static/bitmap/js/stellar.js"></script>
+        <script src="../../static/bitmap/vendors/lightbox/simpleLightbox.min.js"></script>
+        <script src="../../static/bitmap/vendors/nice-select/js/jquery.nice-select.min.js"></script>
+        <script src="../../static/bitmap/vendors/isotope/imagesloaded.pkgd.min.js"></script>
+        <script src="../../static/bitmap/vendors/isotope/isotope-min.js"></script>
+        <script src="../../static/bitmap/vendors/owl-carousel/owl.carousel.min.js"></script>
+        <script src="../../static/bitmap/js/jquery.ajaxchimp.min.js"></script>
+        <script src="../../static/bitmap/js/mail-script.js"></script>
+        <script src="../../static/bitmap/js/theme.js"></script>
+    </body>
+</html>
