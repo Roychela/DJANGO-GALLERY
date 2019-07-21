@@ -15,3 +15,18 @@ class Location(models.Model):
     @classmethod
     def update_location(cls, id, value):
         cls.objects.filter(id=id).update(location_name=value)
+
+
+class Category(models.Model):
+    category_name = models.CharField(max_length =30)
+
+    def __str__(self):
+        return self.category_name
+
+    def save_category(self):
+        self.save()
+    def delete_category(self):
+        self.delete()
+    @classmethod
+    def update_category(cls, id, value):
+        cls.objects.filter(id=id).update(category_name=value)
