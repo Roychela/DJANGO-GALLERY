@@ -2,6 +2,7 @@ config==0.4.2
 dj-database-url==0.5.0
 Django==1.11
 django-heroku==0.3.1
+gunicorn==19.9.0
 Pillow==6.1.0
 psycopg2==2.8.3
 python-decouple==3.1
