@@ -76,18 +76,12 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-                         <script>
-   function copy(ids) {
-       var textCopied = document.getElementById(ids);
-       text = textCopied.src;
-       var elementary = document.createElement("input");
-       document.body.appendChild(elementary);
-       elementary.setAttribute('value', text);
-       elementary.select();
-       document.execCommand("copy");
-       alert("Copied: " + textCopied.src);
-       }
-</script>
+      <script>
+    function copy(element) {
+        $(element).select();
+        document.execCommand("copy");
+    }
+    </script>
         <script src="../../static/bitmap/js/jquery-3.2.1.min.js"></script>
         <script src="../../static/bitmap/js/popper.js"></script>
         <script src="../../static/bitmap/js/bootstrap.min.js"></script>

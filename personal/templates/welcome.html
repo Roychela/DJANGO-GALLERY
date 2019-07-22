@@ -32,7 +32,10 @@
                                         <p class="card-text">Photo description: {{image.image_description}}.</p>
                                         <p class="card-text">Shot in: {{image.location}}</p>
                                         <p class="card-text">Category : {{image.category}}</p>
-                                        <button type="button" class="button_more btn theme_btn" onclick="copy('img{{image.id}}')">Copy Link</button>
+	  							<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 padding-1">
+                                <input id="{{image.id}}-url"  class="form-control input-md responsive" type="text" value="{{image.image.url}}">
+                                </div>
+                                        <button type="button" class="button_more btn theme_btn" onclick="copy('#{{image.id}}-url')">Copy Link</button>
 
                                     </div>
                                     <div class="modal-footer">
