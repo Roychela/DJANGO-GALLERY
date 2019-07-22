@@ -28,11 +28,11 @@
                                         </button>
                                     </div>
                                     <div class="modal-body text-center">
-                                        <p class="card-text">Photo name: {{image.image_name}}.</p>
+                                        <p class="card-text">Photo name : {{image.image_name}}.</p>
                                         <img class="card-img-top" id="img{{image.id}}" src="{{image.image.url}}" alt="Card image cap">
-                                        <p class="card-text">Photo desciption: {{image.image_description}}.</p>
-                                        <p class="card-text"> Shot in : {{image.location}}</p>
-                                        <p class="card-text">Category : {{image.category}}</p>
+                                        <p class="card-text">Photo description : {{image.image_description}}.</p>
+                                        <p class="card-text"> Shot in : {{image.location}}.</p>
+                                        <p class="card-text">Category : {{image.category}}.</p>
                                         <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 padding-1">
                                             <input id="{{image.id}}-url"  class="form-control input-md responsive" type="text" value="https://roy1gallery.herokuapp.com{{image.image.url}}">
                                          </div>
