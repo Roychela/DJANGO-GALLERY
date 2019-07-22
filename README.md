@@ -86,13 +86,16 @@ Open [localhost:8000](http://127.0.0.1:8000/)
 
 
 ## LIVE SITE
-
+Click [Live site](https://roy1gallery.herokuapp.com/) to view the deployed application
 ## KNOWN BUGS
 None
 
 ## TECHNOLOGIES
 * Python3.6
 * Django
+* Javascript
+* Css
+* Scss
 
 ## LICENSE
-[MIT]()
+[MIT](https://github.com/Roychela/DJANGO-GALLERY/blob/master/LICENSE)
