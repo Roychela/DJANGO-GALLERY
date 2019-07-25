@@ -1,6 +1,6 @@
 {% extends 'base.html'%}
 
-{% block content %}
+{% block content %}             
 
 <hr>
  
@@ -13,11 +13,11 @@
                     
 
                     <div class="card" style="width:auto;">
-                        <img class="card-img-top"  id = "img{{ image.id }}" src="{{image.image.url}}" alt="Card image cap" data-toggle="modal" data-target="#{{image.id}}">
+                        <img class="card-img-top"  id = "img{{ image.id }}" src="{{image.image.url}}" alt="Card image cap" data-toggle="modal" data-target="#myModal{{ forloop.counter }}">
 
                      
                         <!-- Modal -->
-                        <div class="modal fade" id="{{image.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal fade" id="myModal{{ forloop.counter }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -51,118 +51,10 @@
         </div>
     </div>
      <hr>
-  <!--================Testimonials Area =================-->
-        <section class="testimonials_area p_120">
-        	<div class="container">
-        		<div class="row testimonials_inner">
-        			<div class="col-lg-6">
-        				<div class="c_feedback_text">
-        					<h4>Visitors feedback</h4>
-        					<p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
-        				</div>
-        			</div>
-        			<div class="col-lg-6">
-        				<div class="t_slider owl-carousel">
-        					<div class="item">
-        						<div class="media">
-        							<div class="d-flex">
-        								<img src="../../static/bitmap/img/testimonials/test-1.png" alt="">
-        							</div>
-        							<div class="media-body">
-        								<p>Definitely the best high quality photos I have seen in a while.</p>
-        								<h4>Jane Wiens</h4>
-        								<h6>Fashion designer</h6>
-        							</div>
-        						</div>
-        					</div>
-        					<div class="item">
-        						<div class="media">
-        							<div class="d-flex">
-        								<img src="../../static/bitmap/img/testimonials/test-1.png" alt="">
-        							</div>
-        							<div class="media-body">
-        								<p>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware.</p>
-        								<h4>Mark Alviro Wiens</h4>
-        								<h6>CEO at Google</h6>
-        							</div>
-        						</div>
-        					</div>
-        				</div>
-        			</div>
-        		</div>
-        	</div>
-        </section>
-        <!--================End Testimonials Area =================-->
+  
         
-        <!--================Service Area =================-->
-        <section class="service_area p_120">
-        	<div class="container">
-        		<div class="main_title">
-        			<h2>Picture Categories Available</h2>
-        			<p>Search for any of the listed categories to view the photos</p>
-        		</div>
-        		<div class="row service_inner">
-        			<div class="col-lg-4 col-md-6">
-        				<div class="service_item">
-        					<a href="#"><h4>TRAVEL</h4></a>
-        					<p>Browse through high quality travel destinations photos</p>
-        				</div>
-        			</div>
-        			<div class="col-lg-4 col-md-6">
-        				<div class="service_item">
-        					<a href="#"><h4>CARS</h4></a>
-        					<p>Browse through high quality car photos</p>
-        				</div>
-        			</div>
-        			<div class="col-lg-4 col-md-6">
-        				<div class="service_item">
-        					<a href="#"><h4>FITNESS</h4></a>
-        					<p>Browse through high quality fitness photos</p>
-        				</div>
-        			</div>
-        			<div class="col-lg-4 col-md-6">
-        				<div class="service_item">
-        					<a href="#"><h4>FOOD</h4></a>
-        					<p>Browse through high quality food photos.</p>
-
-</p>
-        				</div>
-        			</div>
-        			<div class="col-lg-4 col-md-6">
-        				<div class="service_item">
-        					<a href="#"><h4>NATURE</h4></a>
-        					<p>Browse through high quality nature photos</p>
-        				</div>
-        			</div>
-        			<div class="col-lg-4 col-md-6">
-        				<div class="service_item">
-        					<a href="#"><h4>FASHION</h4></a>
-        					<p>Browse through high quality fashion photos</p>
-        				</div>
-        			</div>
-        		</div>
-        	</div>
-        </section>
-        <!--================End Service Area =================-->
+       
         
-
- <!--================Instagram Area =================-->
-        <section class="instagram_area">
-        	<div class="container box_1620">
-        		<div class="insta_btn">
-        			<a class="btn theme_btn" href="https://www.instagram.com/djmcoco/?hl=en">Follow me on instagram</a>
-        		</div>
-        		<div class="instagram_image row m0">
-        			<a href="#"><img src="../../static/bitmap/img/instagram/ins-1.jpg" alt=""></a>
-        			<a href="#"><img src="../../static/bitmap/img/instagram/ins-2.jpg" alt=""></a>
-        			<a href="#"><img src="../../static/bitmap/img/instagram/ins-3.jpg" alt=""></a>
-        			<a href="#"><img src="../../static/bitmap/img/instagram/ins-4.jpg" alt=""></a>
-        			<a href="#"><img src="../../static/bitmap/img/instagram/ins-5.jpg" alt=""></a>
-        			<a href="#"><img src="../../static/bitmap/img/instagram/ins-6.jpg" alt=""></a>
-        		</div>
-        	</div>
-        </section>
-        <!--================End Instagram Area =================-->
    <hr>
 {% endblock %}
 

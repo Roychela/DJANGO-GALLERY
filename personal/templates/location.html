@@ -11,14 +11,16 @@
         <div class="row">
 
             {% for image in location_images %}
-                <div class="col-md-4 details">
-                    <div class="card" style="width: auto">
-                        <img class="card-img-top img-fluid" id="img{{image.id}}" src="{{image.image.url}}" alt="Card image cap"data-toggle="modal" data-target="#{{image.id}}">
+                 <div class="col-md-4">
 
-                        <!-- Button trigger modal -->
-                        
+                    
+
+                    <div class="card" style="width:auto;">
+                        <img class="card-img-top"  id = "img{{ image.id }}" src="{{image.image.url}}" alt="Card image cap" data-toggle="modal" data-target="#myModal{{ forloop.counter }}">
+
+                     
                         <!-- Modal -->
-                        <div class="modal fade" id="{{image.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal fade" id="myModal{{ forloop.counter }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -31,11 +33,11 @@
                                         <p class="card-text">Photo name : {{image.image_name}}.</p>
                                         <img class="card-img-top" id="img{{image.id}}" src="{{image.image.url}}" alt="Card image cap">
                                         <p class="card-text">Photo description : {{image.image_description}}.</p>
-                                        <p class="card-text"> Shot in : {{image.location}}.</p>
-                                        <p class="card-text">Category : {{image.category}}.</p>
-                                        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 padding-1">
-                                            <input id="{{image.id}}-url"  class="form-control input-md responsive" type="text" value="https://roy1gallery.herokuapp.com{{image.image.url}}">
-                                         </div>
+                                        <p class="card-text">Shot in : {{image.location}}</p>
+                                        <p class="card-text">Category : {{image.category}}</p>
+	  							<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 padding-1">
+                                <input id="{{image.id}}-url"  class="form-control input-md responsive" type="text" value="https://roy1gallery.herokuapp.com{{image.image.url}}">
+                                </div>
                                         <button type="button" class="button_more btn theme_btn" onclick="copy('#{{image.id}}-url')">Copy Link</button>
 
                                     </div>

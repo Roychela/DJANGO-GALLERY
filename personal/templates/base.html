@@ -7,19 +7,65 @@
         <link rel="icon" href="../../static/bitmap/img/favicon.png" type="image/png">
         <title>Personal Photo Gallery</title>
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="../../static/bitmap/css/bootstrap.css">
-        <link rel="stylesheet" href="../../static/bitmap/vendors/linericon/style.css">
-        <link rel="stylesheet" href="../../static/bitmap/css/font-awesome.min.css">
-        <link rel="stylesheet" href="../../static/bitmap/vendors/owl-carousel/owl.carousel.min.css">
-        <link rel="stylesheet" href="../../static/bitmap/vendors/lightbox/simpleLightbox.css">
-        <link rel="stylesheet" href="../../static/bitmap/vendors/nice-select/css/nice-select.css">
-        <link rel="stylesheet" href="../../static/bitmap/vendors/animate-css/animate.css">
-        <!-- main css -->
-        <link rel="stylesheet" href="../../static/bitmap/css/style.css">
-        <link rel="stylesheet" href="../../static/bitmap/css/responsive.css">
+          <!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.5/css/mdb.min.css" rel="stylesheet">
+      
     </head>
     <body>
         {% include 'navbar.html' %}
+         <!--================Service Area =================-->
+        	<div class="container">
+        		<div class="text-center panel-warning">
+        			<h2>Picture Categories Available</h2>
+        			<p>Search for any of the listed categories to view the photos</p>
+        		</div>
+        		<div class="row service_inner">
+        			<div class="col-lg-4 col-md-6">
+        				<div class="service_item">
+        					<a href="#"><h4>TRAVEL</h4></a>
+        					<p>Browse through high quality travel destinations photos</p>
+        				</div>
+        			</div>
+        			<div class="col-lg-4 col-md-6">
+        				<div class="service_item">
+        					<a href="#"><h4>CARS</h4></a>
+        					<p>Browse through high quality car photos</p>
+        				</div>
+        			</div>
+        			<div class="col-lg-4 col-md-6">
+        				<div class="service_item">
+        					<a href="#"><h4>FITNESS</h4></a>
+        					<p>Browse through high quality fitness photos</p>
+        				</div>
+        			</div>
+        			<div class="col-lg-4 col-md-6">
+        				<div class="service_item">
+        					<a href="#"><h4>FOOD</h4></a>
+        					<p>Browse through high quality food photos.</p>
+
+</p>
+        				</div>
+        			</div>
+        			<div class="col-lg-4 col-md-6">
+        				<div class="service_item">
+        					<a href="#"><h4>NATURE</h4></a>
+        					<p>Browse through high quality nature photos</p>
+        				</div>
+        			</div>
+        			<div class="col-lg-4 col-md-6">
+        				<div class="service_item">
+        					<a href="#"><h4>FASHION</h4></a>
+        					<p>Browse through high quality fashion photos</p>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+        
+        <!--================End Service Area =================-->
       <!--================Home Banner Area =================-->
         <section class="home_banner_area">
             <div class="banner_inner d-flex align-items-center">
@@ -28,7 +74,7 @@
 					<div class="banner_content text-center">
 						<h2>My Gallery</h2>
 						<p> Scroll down to view {{location}} Photos </p>
-						<a href="#" class="btn theme_btn">Explore Gallery</a>
+						<a href="{% url 'welcome'%}" class="btn theme_btn">Explore Gallery</a>
 					</div>
 				</div>
             </div>
@@ -36,42 +82,63 @@
         <!--================End Home Banner Area =================-->
         
         {% block content %}{% endblock %}
-       
+        <!-- Footer -->
+<footer class="page-footer font-small cyan darken-3">
+
+  <!-- Footer Elements -->
+  <div class="container">
+
+    <!-- Grid row-->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-12 py-5">
+        <div class="mb-5 flex-center">
+
+          <!-- Facebook -->
+          <a class="fb-ic">
+            <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!-- Twitter -->
+          <a class="tw-ic">
+            <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!-- Google +-->
+          <a class="gplus-ic">
+            <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!--Linkedin -->
+          <a class="li-ic">
+            <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!--Instagram-->
+          <a class="ins-ic">
+            <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!--Pinterest-->
+          <a class="pin-ic">
+            <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
+          </a>
+        </div>
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row-->
+
+  </div>
+  <!-- Footer Elements -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2019 Copyright:
+    
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
         
-        <!--================Footer Area =================-->
-        <footer class="footer_area p_120">
-        	<div class="container">
-        		<div class="row footer_inner">
-        			<div class="col-lg-5 col-sm-6">
-        				<aside class="f_widget ab_widget">
-        					<div class="f_title">
-        						<h3>About Me</h3>
-        					</div>
-        					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore </p>
-        					<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-        				</aside>
-        			</div>
-        			
-        			<div class="col-lg-7">
-        				<aside class="f_widget social_widget">
-        					<div class="f_title">
-        						<h3>Follow Me</h3>
-        					</div>
-        					<p>Let us be social</p>
-        					<ul class="list">
-        						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-        						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-        						<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-        						<li><a href="#"><i class="fa fa-behance"></i></a></li>
-        					</ul>
-        				</aside>
-        			</div>
-        		</div>
-        	</div>
-        </footer>
-        <!--================End Footer Area =================-->
+        
   
         
         <!-- Optional JavaScript -->
@@ -82,17 +149,15 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         document.execCommand("copy");
     }
     </script>
-        <script src="../../static/bitmap/js/jquery-3.2.1.min.js"></script>
-        <script src="../../static/bitmap/js/popper.js"></script>
-        <script src="../../static/bitmap/js/bootstrap.min.js"></script>
-        <script src="../../static/bitmap/js/stellar.js"></script>
-        <script src="../../static/bitmap/vendors/lightbox/simpleLightbox.min.js"></script>
-        <script src="../../static/bitmap/vendors/nice-select/js/jquery.nice-select.min.js"></script>
-        <script src="../../static/bitmap/vendors/isotope/imagesloaded.pkgd.min.js"></script>
-        <script src="../../static/bitmap/vendors/isotope/isotope-min.js"></script>
-        <script src="../../static/bitmap/vendors/owl-carousel/owl.carousel.min.js"></script>
-        <script src="../../static/bitmap/js/jquery.ajaxchimp.min.js"></script>
-        <script src="../../static/bitmap/js/mail-script.js"></script>
-        <script src="../../static/bitmap/js/theme.js"></script>
+    <!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.6/js/mdb.min.js"></script>
+        
+        
     </body>
 </html>

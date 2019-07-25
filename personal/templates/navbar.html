@@ -1,47 +1,45 @@
- <!--================Header Menu Area =================-->
-        <header class="header_area">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="container box_1620">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-                        <ul class="nav navbar-nav menu_nav ml-auto">
-                          
-                            <li class="nav-item active"><a class="nav-link" href="{% url 'welcome'%}">Home</a></li> 
-                           
-                            <li class="nav-item submenu dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Locations</a>
-                                <ul class="dropdown-menu">
-                                    {% for location in locations %}
 
-      <a class="dropdown-item" href="{% url 'location' location_name=location.location_name %}"><p>{{location.location_name}}</p></a>
-        {% endfor %}
-                                </ul>
-                            </li> 
-                            
-                            
-                        </ul>
-                        <hr>
-                        <ul class="nav navbar-nav navbar-right">
-                              <div class="navbar-brand search-section">
-                                <div class="row">
-                                    <div class="col-md-12 search-form">
-                                        <form class="form-inline" role="search" action="{% url 'search_image' %}">
-                                            <input class="form-control search-input" name="image" type="search" placeholder="Search Photo Category" aria-label="Search">
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </ul>
-                    </div> 
-                </div>
-            </nav>
-        </header>
+<!--Navbar -->
+<nav class="mb-1 navbar navbar-expand-lg navbar-dark default-color">
+     <div class="container-fluid">
+  <a class="navbar-brand" href="#">My Gallery</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
+    aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'welcome'%}">Home
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">Locations
+        </a>
+        <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
+            {% for location in locations %}
+          <a class="dropdown-item" href="{% url 'location' location_name=location.location_name %}"><p>{{location.location_name}}</p></a>
+           {% endfor %}
+        </div>
+      </li>
+    </ul>
+    <!-- Adding a search form  -->
+      <div class="col-sm-4 col-md-4 navbar-right">
 
+        <form class="navbar-form" role="search" action="{% url 'search_image' %}">
 
-       
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search Photo Category" name="image">
+            <div class="input-group-btn">
+              <button class="btn btn-outline-white btn-md my-2 my-sm-0 ml-3" type="submit">Search</button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+      <!-- search form end -->
+  </div>
+</nav>
